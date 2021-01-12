@@ -1,0 +1,878 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+      "title": "",
+      "version": "1"
+    },
+    "paths": {
+      "/api/Category/all": {
+        "get": {
+          "tags": [
+            "Category"
+          ],
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/MainCategory"
+                    }
+                  }
+                },
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/MainCategory"
+                    }
+                  }
+                },
+                "text/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/MainCategory"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/Category/{id}": {
+        "get": {
+          "tags": [
+            "Category"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "$ref": "#/components/schemas/MainCategory"
+                  }
+                },
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/MainCategory"
+                  }
+                },
+                "text/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/MainCategory"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "put": {
+          "tags": [
+            "Category"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json-patch+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MainCategory"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MainCategory"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MainCategory"
+                }
+              },
+              "application/*+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MainCategory"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "$ref": "#/components/schemas/MainCategory"
+                  }
+                },
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/MainCategory"
+                  }
+                },
+                "text/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/MainCategory"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "delete": {
+          "tags": [
+            "Category"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "$ref": "#/components/schemas/MainCategory"
+                  }
+                },
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/MainCategory"
+                  }
+                },
+                "text/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/MainCategory"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/Category": {
+        "post": {
+          "tags": [
+            "Category"
+          ],
+          "requestBody": {
+            "content": {
+              "application/json-patch+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MainCategory"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MainCategory"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MainCategory"
+                }
+              },
+              "application/*+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MainCategory"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "$ref": "#/components/schemas/MainCategory"
+                  }
+                },
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/MainCategory"
+                  }
+                },
+                "text/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/MainCategory"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/Product/all": {
+        "get": {
+          "tags": [
+            "Product"
+          ],
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Product"
+                    }
+                  }
+                },
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Product"
+                    }
+                  }
+                },
+                "text/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Product"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/Product/{id}": {
+        "get": {
+          "tags": [
+            "Product"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                },
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                },
+                "text/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "put": {
+          "tags": [
+            "Product"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json-patch+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Product"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Product"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Product"
+                }
+              },
+              "application/*+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Product"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                },
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                },
+                "text/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "delete": {
+          "tags": [
+            "Product"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                },
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                },
+                "text/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/Product": {
+        "post": {
+          "tags": [
+            "Product"
+          ],
+          "requestBody": {
+            "content": {
+              "application/json-patch+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Product"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Product"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Product"
+                }
+              },
+              "application/*+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Product"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                },
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                },
+                "text/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/Values": {
+        "get": {
+          "tags": [
+            "Values"
+          ],
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "text/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": [
+            "Values"
+          ],
+          "requestBody": {
+            "content": {
+              "application/json-patch+json": {
+                "schema": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "application/*+json": {
+                "schema": {
+                  "type": "string",
+                  "nullable": true
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        }
+      },
+      "/api/Values/{id}": {
+        "get": {
+          "tags": [
+            "Values"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "type": "string"
+                  }
+                },
+                "application/json": {
+                  "schema": {
+                    "type": "string"
+                  }
+                },
+                "text/json": {
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "put": {
+          "tags": [
+            "Values"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json-patch+json": {
+                "schema": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string",
+                  "nullable": true
+                }
+              },
+              "application/*+json": {
+                "schema": {
+                  "type": "string",
+                  "nullable": true
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        },
+        "delete": {
+          "tags": [
+            "Values"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Order": {
+          "type": "object",
+          "properties": {
+            "OrderId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "OrderTime": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "Note": {
+              "type": "string",
+              "nullable": true
+            },
+            "TrackingNumber": {
+              "type": "string",
+              "nullable": true
+            },
+            "IsPickup": {
+              "type": "boolean",
+              "nullable": true
+            },
+            "PickupLocation": {
+              "type": "string",
+              "nullable": true
+            },
+            "OrderProduct": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/OrderProduct"
+              },
+              "nullable": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "OrderProduct": {
+          "type": "object",
+          "properties": {
+            "Id": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "OrderId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "ProductId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "Order": {
+              "$ref": "#/components/schemas/Order"
+            },
+            "Product": {
+              "$ref": "#/components/schemas/Product"
+            }
+          },
+          "additionalProperties": false
+        },
+        "Sale": {
+          "type": "object",
+          "properties": {
+            "SaleId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "Discount": {
+              "type": "number",
+              "format": "double"
+            },
+            "StartDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "EndDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "Description": {
+              "type": "string",
+              "nullable": true
+            },
+            "ProductId": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "Product": {
+              "$ref": "#/components/schemas/Product"
+            }
+          },
+          "additionalProperties": false
+        },
+        "Product": {
+          "type": "object",
+          "properties": {
+            "ProductId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "ProductName": {
+              "type": "string",
+              "nullable": true
+            },
+            "ProductDesc": {
+              "type": "string",
+              "nullable": true
+            },
+            "Price": {
+              "type": "number",
+              "format": "double"
+            },
+            "Color": {
+              "type": "string",
+              "nullable": true
+            },
+            "Material": {
+              "type": "string",
+              "nullable": true
+            },
+            "Height": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "Width": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "Depth": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "Weight": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "CategoryId": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "Category": {
+              "$ref": "#/components/schemas/Category"
+            },
+            "OrderProduct": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/OrderProduct"
+              },
+              "nullable": true
+            },
+            "Sale": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Sale"
+              },
+              "nullable": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "Category": {
+          "type": "object",
+          "properties": {
+            "CategoryId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "Name": {
+              "type": "string",
+              "nullable": true
+            },
+            "MainCategoryId": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "MainCategory": {
+              "$ref": "#/components/schemas/MainCategory"
+            },
+            "Product": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Product"
+              },
+              "nullable": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "MainCategory": {
+          "type": "object",
+          "properties": {
+            "MainCategoryId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "Name": {
+              "type": "string",
+              "nullable": true
+            },
+            "Category": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Category"
+              },
+              "nullable": true
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  }
