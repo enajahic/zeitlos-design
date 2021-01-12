@@ -1,5 +1,6 @@
 <mat-toolbar>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+    (click)="sidenav.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
   <div class="example-spacer"> <img src="../assets/images/logo.png" class="small-toolbar-logo">
@@ -22,3 +23,63 @@
 
 <hr>
 
+<mat-drawer-container class="example-container">
+  <mat-drawer class="left-sidenav" mode="side" opened #sidenav>
+    <mat-nav-list>
+      <mat-list-item>
+        <button mat-icon-button>
+          <mat-icon>home</mat-icon>
+        </button>
+        Dashboard
+      </mat-list-item>
+      
+     
+      <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+        <mat-expansion-panel-header>
+          <button mat-icon-button>
+            <mat-icon>shopping_basket</mat-icon>
+            E-commerce
+          </button>
+        </mat-expansion-panel-header>
+        <mat-nav-list dense>
+            <a mat-list-item routerLink="#"><mat-icon>weekend</mat-icon>Product manage</a>
+            <a mat-list-item routerLink="product"><mat-icon>add_circle</mat-icon>Add new product</a>
+        </mat-nav-list>
+    </mat-expansion-panel>
+    <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+        <mat-expansion-panel-header>
+          <button mat-icon-button>
+            <mat-icon>lock</mat-icon>
+            Privacy
+          </button>
+        </mat-expansion-panel-header>
+        <mat-nav-list dense>
+            <a mat-list-item routerLink="#"><mat-icon>person_add</mat-icon>Partnership Request</a>
+            <a mat-list-item routerLink="#"><mat-icon>visibility</mat-icon>Profile Visibility</a>
+        </mat-nav-list>
+    </mat-expansion-panel>
+
+
+      <mat-list-item>
+        <button mat-icon-button>
+          <mat-icon>account_circle</mat-icon>
+        </button>
+        User
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-icon-button>
+          <mat-icon>folder</mat-icon>
+        </button>
+        Documentation
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet> </router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+
+<footer class="footer-new">
+We <mat-icon>favorite_boarder</mat-icon> Zeitlos design
+  </footer>
